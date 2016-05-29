@@ -1,4 +1,4 @@
 .idea
-/_sites
-**/.sass-cache
-
+_site
+.sass-cache
+.jekyll-metadata
