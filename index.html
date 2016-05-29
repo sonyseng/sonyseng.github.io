@@ -1,27 +1,12 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sonyseng.github.io</title>
+</head>
+<body>
 
-<section class="post-list">
-	<div class="row">
-		<div class=small-12">
-			<p class="">A list of random snippets and UI experiments. More stuff can be found here: 
-				<a href="http://www.github.com/sonyseng">
-					Github Account <img src="{{site.url}}/images/GitHub-Mark-32px.png" style="width:18px"/>
-				</a>
-			</p>
-		</div>
-	</div>
-	
-	<div class="row">	
-		<div class="small-12">
-				<dl class="panel post-item">
-				{% for post in site.posts limit: 5 %}
-					<dt><a href="{{ post.url }}">{{ post.title }}: </a></dt> 
-					<dd>{{post.desc}} <span class="label">{{post.date | date: '%B %d, %Y' }}</span></dd>
-				{% endfor %}
-			</dl>
-		</div>
-	</div>
-</div>
-</section>
+    ... Something will be here ...
+
+</body>
+</html>
