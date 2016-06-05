@@ -5,16 +5,25 @@ permalink: /blog/
 ---
 
 <section>
-    <ul class="post-list">
-        {% for post in site.posts %}
+
+    {% for post in site.posts %}
+    {% assign currentdate = post.date | date: "%B %Y" %}
+
+    {% if currentdate != date %}
+    {% unless forloop.first %}</ul>{% endunless %}
+
+    <h1 id="y{{post.date | date: "%B %Y"}}">{{ currentdate }}</h1>
+
+    <ul class="month-grouped-posts">
+        {% assign date = currentdate %}
+        {% endif %}
+
         <li>
-            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-            <h2>
-                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-            </h2>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </li>
-        {% endfor %}
-    </ul>
-</section>
 
+        {% if forloop.last %}</ul>{% endif %}
+
+    {% endfor %}
+
+</section>

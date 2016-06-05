@@ -173,17 +173,18 @@
  * Page content
  */
 .page-content {
-    padding: 100px 0;
+    padding: 10px 0;
     background-color: #3E3532;
     text-align: center;
     border-top: 10px solid #C1AF99;
     border-bottom: 10px solid #C1AF99;
+    min-height: 500px;
 }
 
 .page-heading {
-    font-size: 20px;
-    color: #C1AF99;
-    margin: 70px 0px;
+    font-size: 24px;
+    color: #A58660;
+    margin: 10px 0px;
 }
 
 .post-list {
@@ -201,10 +202,21 @@
 }
 
 .post-link {
-    display: block;
     font-size: 16px;
 }
 
+a.post-link {
+    color: #C1AF82;
+    text-decoration: none;
+
+    &:visited {
+        color: #847F71;
+    }
+    &:hover {
+        color: #C1AF82;
+        text-decoration: underline;
+    }
+}
 
 
 /**
@@ -215,10 +227,11 @@
 }
 
 .post-title {
-    font-size: 22px;
+    font-size: 26px;
     letter-spacing: -1px;
     line-height: 1;
-    color: #C1AF99;
+    color: #A58660;
+    margin: 10px;
 
     @include media-query($on-laptop) {
         font-size: 22px;
@@ -227,6 +240,7 @@
 
 .post-content {
     margin-bottom: $spacing-unit;
+    text-align: left;
 
     h2 {
         font-size: 32px;
@@ -251,4 +265,9 @@
             font-size: 18px;
         }
     }
+}
+
+.month-grouped-posts {
+    list-style: none;
+    margin: 20px 0px
 }
